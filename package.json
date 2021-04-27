@@ -1,0 +1,24 @@
+{
+    "name": "aiken-syntax-highlighting",
+    "displayName": "Aiken Syntax Highlighting",
+    "description": "Syntax highlighting for Aiken language for quiz questions and answers",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "aiken",
+            "aliases": ["Aiken", "aiken"],
+            "extensions": ["aiken.txt","txt"]
+        }],
+        "grammars": [{
+            "language": "aiken",
+            "scopeName": "text.aiken",
+            "path": "./syntaxes/aiken.tmLanguage.json"
+        }]
+    }
+}

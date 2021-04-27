@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Aiken",
+	"patterns": [
+		{ "include": "#question" },
+		{ "include": "#answer_intro" },
+		{ "include": "#answer_value" },
+		{ "include": "#correct_answer_intro" },
+		{ "include": "#correct_answer_value" }
+	],
+	"scopeName": "text.aiken",
+	"repository": {
+		"question": {
+			"patterns": [{
+				"name": "entity.name.section.aiken",
+				"match": "\\b([^\\r\\n]+)\\s+A[\\)\\.]"
+			}]
+		},
+		"answer_intro": {
+			"patterns": [{
+				"name": "constant.character.aiken",
+				"match": "\\b(\\w)[\\)\\.]"
+			}]
+		},
+		"answer_value": {
+			"name": "string.unquoted.aiken",
+			"match": "\\b\\w[\\)\\.]\\s*([^\\r\\n]+)"
+		},
+		"correct_answer_intro": {
+			"patterns": [{
+				"name": "keyword.control.aiken",
+				"match": "\\b(ANSWER):"
+			}]
+		},
+		"correct_answer_value": {
+			"patterns": [{
+				"name": "variable.parameter.aiken",
+				"match": "\\bANSWER: (\\w)"
+			}]
+		}
+	}
+}
